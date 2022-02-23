@@ -35,6 +35,7 @@ COIN_TOP_UP_RECORD = '/api/account/v3/deposit/history/'
 CURRENCIES_INFO = '/api/account/v3/currencies'
 COIN_FEE = '/api/account/v3/withdrawal/fee'
 SUB_BAN = '/api/account/v3/sub-account'
+DEPOSIT_INVOICE = '/api/account/v3/deposit-lightning'
 
 # fiat
 FIAT_DEPOSIT = '/api/account/v3/fiat/deposit'

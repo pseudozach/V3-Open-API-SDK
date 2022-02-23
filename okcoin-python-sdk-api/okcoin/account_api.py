@@ -60,6 +60,11 @@ class AccountAPI(Client):
         params = {'currency': currency}
         return self._request_with_params(GET, TOP_UP_ADDRESS, params)
 
+    # get ln deposit invoice
+    def get_deposit_invoice(self, amount):
+        params = {'amount': amount, 'to': '1', 'ccy': 'BTC'}
+        return self._request_with_params(GET, DEPOSIT_INVOICE, params)
+        
     def get_asset_valuation(self, account_type='', valuation_currency=''):
         params = {}
         if account_type:
