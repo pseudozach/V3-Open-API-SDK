@@ -270,6 +270,13 @@ export function AuthenticatedClient(
             }`
           );
         },
+        async getInvoice(amount: string): Promise<any> {
+          return get(
+            `/api/account/v3/deposit-lightning${
+              amount ? `?amount=${amount}&to=1&ccy=BTC` : ''
+            }`
+          );
+        },
         async getDepositHistory(currency?: string): Promise<any> {
           return get(
             `/api/account/v3/deposit/history${currency ? `/${currency}` : ''}`
